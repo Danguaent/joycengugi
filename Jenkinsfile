@@ -20,9 +20,9 @@ sh "docker tag docker_test:latest jgit/docker_test:latest"
 sh "docker push jgit/docker_test:latest"
 }
 
-stage('Apply changes to the environment') {
-sh "ls -l"
+stage('Run Container') {
+
 }
 sh "docker container run --detach --publish 5861:5861 --name latest jgit/docker_test:latest"
-
+}
 }
